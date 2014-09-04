@@ -1,0 +1,19 @@
+- if flash.present?
+  .container
+    .row
+      .col-lg-12
+        - flash.each do |name, msg|
+          - if name == :success
+            .alert.alert-dismissable.alert-success
+              button.close data-dismiss="alert" type="button"  ×
+              h4 Success!
+              p = msg
+          - elsif name == :error
+            .alert.alert-dismissable.alert-danger
+              button.close data-dismiss="alert" type="button"  ×
+              h4 Error!
+              p = msg
+          - else
+            .alert.alert-dismissable.alert-info
+              button.close data-dismiss="alert" type="button"  ×
+              p = msg
