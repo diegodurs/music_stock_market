@@ -39,3 +39,5 @@ group :development, :test do
   gem 'capybara', '~> 2.4.1'
 end
 
+gem 'sorcery', '~> 0.8.6'
+gem 'slim-rails', '~> 2.1.5'
