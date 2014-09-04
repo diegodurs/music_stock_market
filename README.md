@@ -1,0 +1,1 @@
+# Another blog app build with Rails 4.2
