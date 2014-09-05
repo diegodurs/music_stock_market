@@ -4,7 +4,7 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-    @user = login(params[:email], params[:password], params[:remember])
+    @user = login(params[:user][:email], params[:user][:password], params[:user][:remember])
     if @user
       redirect_to root_path, success: 'Logged in!'
     else

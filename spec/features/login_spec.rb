@@ -8,6 +8,8 @@ feature "Login" do
     fill_in 'Password', with: '1234567'
     fill_in 'Email', with: 'user@email.com'
     click_button 'Sign in'
+
+    expect(page).to have_content('Success')
   end
 
   scenario 'failing' do
@@ -18,6 +20,6 @@ feature "Login" do
     fill_in 'Email', with: 'user@email.com'
     click_button 'Sign in'
 
-    expect(page).to have_content('Error')
+    expect(page).to have_content('Login failed')
   end
 end
